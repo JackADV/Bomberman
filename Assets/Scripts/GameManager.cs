@@ -33,6 +33,17 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
+    #region Singleotn
+    public static GameManager Instance = null;
+    private void Awake()
+    {
+        if (Instance != null)
+        {
+            Destroy(Instance.gameObject);
+        }
+        Instance = this;
+    }
+    #endregion
     public int deadPlayers = 0;
     private int deadPlayerNumber = -1;
 
