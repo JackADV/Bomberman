@@ -31,7 +31,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class GlobalStateManager : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
     public int deadPlayers = 0;
     private int deadPlayerNumber = -1;
