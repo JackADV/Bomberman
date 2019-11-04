@@ -41,6 +41,21 @@ public class BombermanTests
 
 
     }
+    [UnityTest]
+    public IEnumerator GamePrefabLoaded()
+    {
+        yield return new WaitForEndOfFrame();
+
+        // Game object should exist at this point in time
+        Assert.NotNull(game);
+    }
+
+    [UnityTest]
+    public IEnumerator PlayerExists()
+    {
+        yield return new WaitForEndOfFrame();
+        Assert.NotNull(players, "No player dawg");
+    }
 
     // Tests go here
     [UnityTest]
