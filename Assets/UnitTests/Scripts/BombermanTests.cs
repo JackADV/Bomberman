@@ -85,11 +85,11 @@ public class BombermanTests
 
         player1.Move(true, false, false, false);
 
-        yield return new WaitForEndOfFrame();
+        yield return new WaitForFixedUpdate();
 
         Vector3 newPosition = player1.transform.position;
 
-        Assert.IsTrue(oldPosition !=(newPosition));
+        Assert.IsTrue(oldPosition != newPosition);
 
     }
     [UnityTest]
